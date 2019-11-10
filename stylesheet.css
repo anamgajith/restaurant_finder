@@ -1,0 +1,15 @@
+.input-group-text{
+    user-select:none;
+}
+.top{
+    background-color: #f7e8f6;
+    background-size: cover;
+}
+body{
+    background-color: #f1c6e7;
+}
+.card-img-top {
+    width: 100%;
+    height: 15vw;
+    object-fit: cover;
+}
