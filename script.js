@@ -25,7 +25,7 @@ var ViewModel = function(){
         this.xhr = new XMLHttpRequest()
         this.xhr.addEventListener("readystatechange",function(event){
             if(this.readyState == 4){
-                j =JSON.parse(this.responseText)
+                var j =JSON.parse(this.responseText)
                 self.city_id(j.location_suggestions[0].city_id)
                 self.getRestaurants()
             }
@@ -38,7 +38,7 @@ var ViewModel = function(){
         this.xhr = new XMLHttpRequest()
         this.xhr.addEventListener("readystatechange",function(event){
             if(this.readyState == 4){
-                j =JSON.parse(this.responseText)
+                var j =JSON.parse(this.responseText)
                 self.restaurants.removeAll()
                 j.restaurants.forEach(element => {
                     self.restaurants.push(new restaurant(element.restaurant.name,element.restaurant.location.address,
